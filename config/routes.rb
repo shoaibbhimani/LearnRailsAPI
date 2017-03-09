@@ -1,6 +1,8 @@
 require 'api_constraints'
 
 MarketPlaceApi::Application.routes.draw do
+  devise_for :shoaibs
+  devise_for :people
   # Api definition
   namespace :api, defaults: { format: :json },
                               constraints: { subdomain: 'api' }, path: '/'  do
